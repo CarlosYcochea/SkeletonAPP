@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ubicaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Buscar Ubicaciones"></ion-searchbar>
+  <ion-button expand="block" [routerLink]="['/agregar-ubicacion']">Agregar Producto</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let u of ubicaciones">
+      <ion-label>
+        {{ u.nombre }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

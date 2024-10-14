@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Ubicación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()" #ubicacionForm="ngForm">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" required [(ngModel)]="ubicacion.nombre" name="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Rack</ion-label>
+      <ion-input type="text" required [(ngModel)]="ubicacion.rack" name="rack"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ubicación</ion-label>
+      <ion-input type="text" required [(ngModel)]="ubicacion.ubicacion" name="ubicacion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input type="number" required [(ngModel)]="ubicacion.cantidad" name="cantidad"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" [disabled]="!ubicacionForm.form.valid">Agregar</ion-button>
+  </form>
+</ion-content>
